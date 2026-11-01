@@ -1,0 +1,27 @@
+/**
+ * Post Template (Query Loop) details.
+ *
+ * @package Apex_Grid
+ */
+
+/* Featured images in feed cards: cap height and crop. */
+.wp-block-post-template .apex-grid-feed-card .wp-block-post-featured-image img {
+	max-height: 280px;
+	object-fit: cover;
+}
+
+/* Activity list rows. */
+.wp-block-post-template.apex-grid-activity-list > li + li {
+	border-top: 1px solid var(--wp--preset--color--border-base);
+}
+
+.wp-block-post-template.apex-grid-activity-list .wp-block-post-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Avatars rendered as initials-style squares. */
+.wp-block-post-template .wp-block-avatar img {
+	display: block;
+	border: 1px solid var(--wp--preset--color--border-strong);
+}

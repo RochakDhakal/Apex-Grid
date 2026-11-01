@@ -1,0 +1,1029 @@
+# Copyright (C) 2026 Rochak Dhakal
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Apex Grid 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/apex-grid\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-31T16:39:26+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: apex-grid\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Apex Grid"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Apex Grid is a dark, motorsport-inspired block theme with a fixed sidebar navigation in place of a top header. Built for clubs, communities, teams and blogs, it uses native blocks, theme.json and Full Site Editing so every part of the layout can be customised in the Site Editor."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Rochak Dhakal"
+msgstr ""
+
+#: functions.php:91
+msgid "Card"
+msgstr ""
+
+#: functions.php:92
+#: functions.php:96
+msgid "Carbon texture"
+msgstr ""
+
+#: functions.php:93
+#: functions.php:97
+msgid "Speed lines"
+msgstr ""
+
+#: functions.php:100
+#: functions.php:108
+msgid "Racing stripe"
+msgstr ""
+
+#: functions.php:101
+msgid "Gradient text"
+msgstr ""
+
+#: functions.php:104
+msgid "Kicker"
+msgstr ""
+
+#: functions.php:105
+msgid "Live dot"
+msgstr ""
+
+#: functions.php:111
+msgid "Leaderboard"
+msgstr ""
+
+#: functions.php:142
+msgid "Apex Grid: Sections"
+msgstr ""
+
+#: functions.php:143
+msgid "Hero, stats, events, posts and call-to-action sections."
+msgstr ""
+
+#: functions.php:150
+msgid "Apex Grid: Pages"
+msgstr ""
+
+#: functions.php:151
+msgid "Full page layouts built from Apex Grid sections."
+msgstr ""
+
+#: patterns/announcement.php
+msgctxt "Pattern title"
+msgid "Announcement"
+msgstr ""
+
+#: patterns/announcement.php
+msgctxt "Pattern description"
+msgid "Highlighted pinned announcement card with a red-tinted border."
+msgstr ""
+
+#: patterns/announcement.php:17
+msgctxt "Sample label"
+msgid "Pinned · Announcement"
+msgstr ""
+
+#: patterns/announcement.php:21
+msgctxt "Sample announcement title"
+msgid "Season calendar is live"
+msgstr ""
+
+#: patterns/announcement.php:25
+msgid "All rounds, track days and social nights for the new season are now published. Save the dates and sign up early — places are limited."
+msgstr ""
+
+#: patterns/announcement.php:30
+msgctxt "Button label"
+msgid "Read more"
+msgstr ""
+
+#: patterns/call-to-action.php
+msgctxt "Pattern title"
+msgid "Call to action"
+msgstr ""
+
+#: patterns/call-to-action.php
+msgctxt "Pattern description"
+msgid "Full-width call to action with racing stripe, heading, text and two buttons."
+msgstr ""
+
+#: patterns/call-to-action.php:16
+msgctxt "Block name"
+msgid "Call to action"
+msgstr ""
+
+#: patterns/call-to-action.php:19
+msgctxt "CTA kicker"
+msgid "Membership"
+msgstr ""
+
+#: patterns/call-to-action.php:23
+msgctxt "CTA heading"
+msgid "Ready to join the grid?"
+msgstr ""
+
+#: patterns/call-to-action.php:27
+msgid "Members get early event sign-ups, track-day discounts and a seat at every race night."
+msgstr ""
+
+#: patterns/call-to-action.php:32
+msgctxt "Button label"
+msgid "Become a member"
+msgstr ""
+
+#: patterns/call-to-action.php:36
+msgctxt "Button label"
+msgid "Contact us"
+msgstr ""
+
+#: patterns/featured-event.php
+msgctxt "Pattern title"
+msgid "Featured event"
+msgstr ""
+
+#: patterns/featured-event.php
+msgctxt "Pattern description"
+msgid "Event card with image, date, location and a static countdown, next to a grid of quick links. All details are editable sample content."
+msgstr ""
+
+#: patterns/featured-event.php:21
+msgctxt "Block name"
+msgid "Featured event"
+msgstr ""
+
+#: patterns/featured-event.php:23
+msgctxt "Section heading"
+msgid "Next on track"
+msgstr ""
+
+#: patterns/featured-event.php:31
+msgctxt "Sample event status"
+msgid "Registration open"
+msgstr ""
+
+#: patterns/featured-event.php:35
+msgctxt "Sample event title"
+msgid "Night Sprint · Round 4"
+msgstr ""
+
+#: patterns/featured-event.php:41
+msgctxt "Sample event date"
+msgid "Sat 14 Dec · 19:00"
+msgstr ""
+
+#: patterns/featured-event.php:45
+msgctxt "Sample event location"
+msgid "Riverside Circuit"
+msgstr ""
+
+#: patterns/featured-event.php:51
+msgctxt "Sample countdown number"
+msgid "12"
+msgstr ""
+
+#: patterns/featured-event.php:55
+msgctxt "Sample countdown label"
+msgid "Days to go"
+msgstr ""
+
+#: patterns/featured-event.php:62
+msgctxt "Button label"
+msgid "Register"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern description"
+msgid "Compact footer for the main column with racing stripe, site title, short text, horizontal navigation, social icons and a copyright line."
+msgstr ""
+
+#: patterns/footer.php:16
+msgctxt "Block name"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php:26
+msgid "A home for people who live for the next lap. Events, results and stories from the paddock and the community."
+msgstr ""
+
+#: patterns/footer.php:31
+msgctxt "Navigation label"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php:32
+#: patterns/sidebar-header.php:34
+msgctxt "Menu item"
+msgid "Home"
+msgstr ""
+
+#. translators: %s: Current year.
+#: patterns/footer.php:51
+#, php-format
+msgid "© %s · All rights reserved"
+msgstr ""
+
+#. translators: %s: WordPress link.
+#: patterns/footer.php:55
+#, php-format
+msgid "Powered by %s"
+msgstr ""
+
+#. translators: %s: WordPress link.
+#: patterns/footer.php:55
+msgid "https://wordpress.org"
+msgstr ""
+
+#: patterns/gallery-grid.php
+msgctxt "Pattern title"
+msgid "Gallery grid"
+msgstr ""
+
+#: patterns/gallery-grid.php
+msgctxt "Pattern description"
+msgid "Section heading and a cropped two-column gallery. Replace the sample images with your own photos."
+msgstr ""
+
+#: patterns/gallery-grid.php:26
+msgctxt "Section heading"
+msgid "Gallery"
+msgstr ""
+
+#: patterns/gallery-grid.php:32 patterns/gallery-grid.php:36 patterns/gallery-grid.php:40 patterns/gallery-grid.php:44
+msgctxt "Sample image description"
+msgid "Abstract light streaks in red and cyan"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Full-height hero with kicker, two-line display heading (second line in gradient text), intro and two buttons. Ships with a sample photo; replace it from the Media Library in the Cover settings."
+msgstr ""
+
+#: patterns/hero.php:24
+msgctxt "Hero kicker"
+msgid "Est. 2026 · Monaco"
+msgstr ""
+
+#: patterns/hero.php:28
+msgctxt "Hero heading, first line"
+msgid "Apex Grid"
+msgstr ""
+
+#: patterns/hero.php:28
+msgctxt "Hero heading, second line"
+msgid "Club"
+msgstr ""
+
+#: patterns/hero.php:32
+msgid "Track days, race nights and a community that lives for the next lap. Join the grid, follow the season and meet people who share the obsession."
+msgstr ""
+
+#: patterns/hero.php:37
+msgctxt "Button label"
+msgid "Join the club"
+msgstr ""
+
+#: patterns/hero.php:41
+msgctxt "Button label"
+msgid "Upcoming events"
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404 content"
+msgstr ""
+
+#: patterns/hidden-404.php:23
+msgctxt "404 heading"
+msgid "Page not found"
+msgstr ""
+
+#: patterns/hidden-404.php:27
+msgid "This page went off track. It may have moved, or the link may be wrong. Try a search or head back to the start line."
+msgstr ""
+
+#: patterns/hidden-404.php:30
+#: patterns/sidebar-header.php:49
+#: patterns/sidebar.php:18
+msgctxt "Search form label"
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-404.php:30
+#: patterns/sidebar-header.php:49
+#: patterns/sidebar.php:18
+msgctxt "Search input placeholder"
+msgid "Search…"
+msgstr ""
+
+#: patterns/hidden-404.php:30
+#: patterns/sidebar-header.php:49
+#: patterns/sidebar.php:18
+msgctxt "Search button text"
+msgid "Search"
+msgstr ""
+
+#: patterns/hidden-404.php:34
+#: patterns/hidden-no-results.php:24
+msgctxt "Button label"
+msgid "Back to home"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php
+msgctxt "Pattern title"
+msgid "Blog heading"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:15
+msgctxt "Blog page heading"
+msgid "Latest"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:19
+msgid "News, race reports and stories from the community."
+msgstr ""
+
+#: patterns/hidden-no-results.php
+msgctxt "Pattern title"
+msgid "No results"
+msgstr ""
+
+#: patterns/hidden-no-results.php:15
+msgid "Nothing on the grid yet"
+msgstr ""
+
+#: patterns/hidden-no-results.php:19
+msgid "We could not find anything here. Try a different search, or head back to the homepage."
+msgstr ""
+
+#: patterns/hidden-related-posts.php
+msgctxt "Pattern title"
+msgid "Related posts"
+msgstr ""
+
+#: patterns/hidden-related-posts.php:18
+msgctxt "Section heading"
+msgid "Related posts"
+msgstr ""
+
+#: patterns/latest-posts-list.php
+msgctxt "Pattern title"
+msgid "Latest posts list"
+msgstr ""
+
+#: patterns/latest-posts-list.php
+msgctxt "Pattern description"
+msgid "Compact activity-style list of the five latest posts with author avatar, title, author and date."
+msgstr ""
+
+#: patterns/latest-posts-list.php:17
+msgctxt "Block name"
+msgid "Latest posts"
+msgstr ""
+
+#: patterns/latest-posts-list.php:20
+msgctxt "Section heading"
+msgid "Latest from the paddock"
+msgstr ""
+
+#: patterns/latest-posts-list.php:24
+msgctxt "Section label"
+msgid "Live feed"
+msgstr ""
+
+#: patterns/latest-posts-list.php:46
+msgid "No posts yet. Your latest posts will appear here."
+msgstr ""
+
+#: patterns/page-landing.php
+msgctxt "Pattern title"
+msgid "Landing page"
+msgstr ""
+
+#: patterns/page-landing.php
+msgctxt "Pattern description"
+msgid "A full club landing page: hero, stats, featured event, latest posts and call to action. Use with the Full Width Page template."
+msgstr ""
+
+#: patterns/posts-feed.php
+msgctxt "Pattern title"
+msgid "Posts feed"
+msgstr ""
+
+#: patterns/posts-feed.php
+msgctxt "Pattern description"
+msgid "Feed-style post cards with author, date, title, excerpt, featured image, category and comment count. Sticky posts are highlighted as pinned."
+msgstr ""
+
+#: patterns/posts-feed.php:15
+msgctxt "Block name"
+msgid "Posts feed"
+msgstr ""
+
+#: patterns/posts-feed.php:19
+msgctxt "Label for sticky posts"
+msgid "Pinned"
+msgstr ""
+
+#: patterns/posts-grid.php
+msgctxt "Pattern title"
+msgid "Posts grid"
+msgstr ""
+
+#: patterns/posts-grid.php
+msgctxt "Pattern description"
+msgid "Three-column grid of post cards with featured image, category, title, excerpt and date. Collapses to two and one column."
+msgstr ""
+
+#: patterns/posts-grid.php:17
+msgctxt "Block name"
+msgid "Posts grid"
+msgstr ""
+
+#: patterns/posts-grid.php:19
+msgctxt "Section heading"
+msgid "Latest stories"
+msgstr ""
+
+#: patterns/quick-links.php
+msgctxt "Pattern title"
+msgid "Quick links"
+msgstr ""
+
+#: patterns/quick-links.php
+msgctxt "Pattern description"
+msgid "A 2×3 grid of link cards, each with a coloured accent bar. Edit the titles, text and links."
+msgstr ""
+
+#: patterns/quick-links.php:16
+msgctxt "Quick link title"
+msgid "Events"
+msgstr ""
+
+#: patterns/quick-links.php:16
+msgctxt "Quick link label"
+msgid "Calendar & sign-ups"
+msgstr ""
+
+#: patterns/quick-links.php:17
+msgctxt "Quick link title"
+msgid "Results"
+msgstr ""
+
+#: patterns/quick-links.php:17
+msgctxt "Quick link label"
+msgid "Times & reports"
+msgstr ""
+
+#: patterns/quick-links.php:18
+msgctxt "Quick link title"
+msgid "Standings"
+msgstr ""
+
+#: patterns/quick-links.php:18
+msgctxt "Quick link label"
+msgid "Season table"
+msgstr ""
+
+#: patterns/quick-links.php:19
+msgctxt "Quick link title"
+msgid "Community"
+msgstr ""
+
+#: patterns/quick-links.php:19
+msgctxt "Quick link label"
+msgid "News & discussion"
+msgstr ""
+
+#: patterns/quick-links.php:20
+msgctxt "Quick link title"
+msgid "Gallery"
+msgstr ""
+
+#: patterns/quick-links.php:20
+msgctxt "Quick link label"
+msgid "Photos from the track"
+msgstr ""
+
+#: patterns/quick-links.php:21
+msgctxt "Quick link title"
+msgid "Membership"
+msgstr ""
+
+#: patterns/quick-links.php:21
+msgctxt "Quick link label"
+msgid "Join the grid"
+msgstr ""
+
+#: patterns/quick-links.php:24
+msgctxt "Block name"
+msgid "Quick links"
+msgstr ""
+
+#: patterns/section-heading.php
+msgctxt "Pattern title"
+msgid "Section heading"
+msgstr ""
+
+#: patterns/section-heading.php
+msgctxt "Pattern description"
+msgid "Racing stripe and uppercase heading with a short supporting line."
+msgstr ""
+
+#: patterns/section-heading.php:17
+msgctxt "Sample heading"
+msgid "Section title"
+msgstr ""
+
+#: patterns/section-heading.php:21
+msgid "A short line that introduces this section."
+msgstr ""
+
+#: patterns/sidebar-header.php
+msgctxt "Pattern title"
+msgid "Sidebar header"
+msgstr ""
+
+#: patterns/sidebar-header.php
+msgctxt "Pattern description"
+msgid "Vertical sidebar with racing stripe, site identity, sectioned navigation, search, social icons and log in link. Becomes a top bar with a drawer menu below 1024px."
+msgstr ""
+
+#: patterns/sidebar-header.php:17
+msgctxt "Block name"
+msgid "Sidebar"
+msgstr ""
+
+#: patterns/sidebar-header.php:32
+msgctxt "Navigation label"
+msgid "Primary"
+msgstr ""
+
+#: patterns/sidebar-header.php:33
+msgctxt "Sidebar menu section label"
+msgid "Main"
+msgstr ""
+
+#: patterns/sidebar-header.php:37
+msgctxt "Sidebar menu section label"
+msgid "Explore"
+msgstr ""
+
+#: patterns/sidebar.php
+msgctxt "Pattern title"
+msgid "Content sidebar"
+msgstr ""
+
+#: patterns/sidebar.php
+msgctxt "Pattern description"
+msgid "Right-hand content sidebar with search, latest posts, categories, tag cloud and a call to action."
+msgstr ""
+
+#: patterns/sidebar.php:17
+msgctxt "Block name"
+msgid "Content sidebar"
+msgstr ""
+
+#: patterns/sidebar.php:22
+msgctxt "Sidebar heading"
+msgid "Latest posts"
+msgstr ""
+
+#: patterns/sidebar.php:30
+msgctxt "Sidebar heading"
+msgid "Categories"
+msgstr ""
+
+#: patterns/sidebar.php:38
+msgctxt "Sidebar heading"
+msgid "Tags"
+msgstr ""
+
+#: patterns/standings-table.php
+msgctxt "Pattern title"
+msgid "Standings table"
+msgstr ""
+
+#: patterns/standings-table.php
+msgctxt "Pattern description"
+msgid "Leaderboard-style table with sample rows. Replace the names and points with your own results."
+msgstr ""
+
+#: patterns/standings-table.php:16
+#: patterns/standings-table.php:17
+msgctxt "Sample class"
+msgid "Pro"
+msgstr ""
+
+#: patterns/standings-table.php:18
+#: patterns/standings-table.php:19
+msgctxt "Sample class"
+msgid "Am"
+msgstr ""
+
+#: patterns/standings-table.php:20
+msgctxt "Sample class"
+msgid "Rookie"
+msgstr ""
+
+#: patterns/standings-table.php:30
+msgctxt "Section heading"
+msgid "Season standings"
+msgstr ""
+
+#: patterns/standings-table.php:34
+msgctxt "Table header: position"
+msgid "Pos"
+msgstr ""
+
+#: patterns/standings-table.php:34
+msgctxt "Table header"
+msgid "Driver"
+msgstr ""
+
+#: patterns/standings-table.php:34
+msgctxt "Table header"
+msgid "Class"
+msgstr ""
+
+#: patterns/standings-table.php:34
+msgctxt "Table header"
+msgid "Points"
+msgstr ""
+
+#: patterns/standings-table.php:34
+msgid "Sample standings — replace with your own results."
+msgstr ""
+
+#: patterns/stats-bar.php
+msgctxt "Pattern title"
+msgid "Stats bar"
+msgstr ""
+
+#: patterns/stats-bar.php
+msgctxt "Pattern description"
+msgid "Four large figures with mono labels, divided by borders. The numbers are editable sample content."
+msgstr ""
+
+#: patterns/stats-bar.php:17
+msgctxt "Sample stat label"
+msgid "Members"
+msgstr ""
+
+#: patterns/stats-bar.php:18
+msgctxt "Sample stat label"
+msgid "Events hosted"
+msgstr ""
+
+#: patterns/stats-bar.php:19
+msgctxt "Sample stat label"
+msgid "Track days a year"
+msgstr ""
+
+#: patterns/stats-bar.php:20
+msgctxt "Sample stat label"
+msgid "Seasons"
+msgstr ""
+
+#: patterns/stats-bar.php:23
+msgctxt "Block name"
+msgid "Stats (sample numbers — edit me)"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Surface Raised"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Surface Strong"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Border"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Border Strong"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Subtle"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Muted"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Text Secondary"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Primary Dark"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Primary Bright"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Highlight"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Color name"
+msgid "Success"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Gradient name"
+msgid "Racing Stripe"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Gradient name"
+msgid "Red Heat"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Gradient name"
+msgid "Hero Fade"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Gradient name"
+msgid "Bottom Fade"
+msgstr ""
+
+#: theme.json
+#: styles/carbon-cyan.json
+msgctxt "Gradient name"
+msgid "Member Card"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Glow Red"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Glow Cyan"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Barlow Condensed"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "DM Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "JetBrains Mono"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Label"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "2X Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Full Width Page"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page With Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Post With Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Content Sidebar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: styles/carbon-cyan.json
+msgctxt "Style variation name"
+msgid "Carbon Cyan"
+msgstr ""
+
+#. translators: %s: Theme name.
+#: inc/dashboard-notice.php:56
+msgid "%s theme preview"
+msgstr ""
+
+#: inc/dashboard-notice.php:59
+msgid "Theme activated"
+msgstr ""
+
+#. translators: %s: Theme name.
+#: inc/dashboard-notice.php:63
+msgid "Thanks for using %s!"
+msgstr ""
+
+#: inc/dashboard-notice.php:66
+msgid "Find documentation, updates and more from the theme author."
+msgstr ""
+
+#: inc/dashboard-notice.php:70
+msgid "Visit Website"
+msgstr ""
+
+#: inc/dashboard-notice.php:71
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: inc/dashboard-notice.php:75
+msgid "Dismiss this notice."
+msgstr ""

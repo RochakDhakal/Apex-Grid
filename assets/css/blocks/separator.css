@@ -1,0 +1,21 @@
+/**
+ * Separator block style: racing stripe.
+ *
+ * @package Apex_Grid
+ */
+
+.wp-block-separator.is-style-apex-grid-racing-stripe {
+	height: 3px;
+	border: 0;
+	background: var(--wp--preset--gradient--racing-stripe);
+	opacity: 1;
+}
+
+:where(.wp-block-separator.is-style-apex-grid-racing-stripe:not(.alignwide):not(.alignfull)) {
+	width: 100%;
+}
+
+.wp-block-separator.is-style-apex-grid-racing-stripe.apex-grid-stripe-short.apex-grid-stripe-short {
+	width: 4rem;
+	margin-left: 0;
+}

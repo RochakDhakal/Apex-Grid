@@ -1,0 +1,620 @@
+/**
+ * Apex Grid — layout.
+ *
+ * Covers what theme.json cannot express: the sidebar shell, sticky sidebar,
+ * the mobile top bar, the navigation drawer breakpoint, the sidebar menu
+ * states, focus rings and reduced motion.
+ *
+ * Note: CSS custom properties cannot be used inside media queries, so the
+ * 1024px value below mirrors --wp--custom--sidebar--breakpoint.
+ *
+ * @package Apex_Grid
+ */
+
+/* -------------------------------------------------------------------------
+ * Shell
+ * ---------------------------------------------------------------------- */
+
+.apex-grid-shell {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.apex-grid-main {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.apex-grid-main > main {
+	flex: 1 0 auto;
+}
+
+/* -------------------------------------------------------------------------
+ * Sidebar (shared)
+ * ---------------------------------------------------------------------- */
+
+.apex-grid-sidebar {
+	z-index: 50;
+	background-color: var(--wp--preset--color--surface);
+}
+
+.apex-grid-sidebar .apex-grid-sidebar__brand {
+	min-width: 0;
+}
+
+.apex-grid-sidebar .wp-block-site-logo img {
+	display: block;
+}
+
+.apex-grid-sidebar .wp-block-site-title {
+	overflow-wrap: anywhere;
+}
+
+/* Section labels: navigation submenus that are always open and have no link. */
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always > .wp-block-navigation-item__content:not([href]) {
+	padding: 0 1rem;
+	color: var(--wp--preset--color--muted);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	cursor: default;
+}
+
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always {
+	gap: 0.375rem;
+	width: 100%;
+}
+
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always > .wp-block-navigation__submenu-container {
+	gap: 2px;
+	width: 100%;
+	min-width: 0;
+	padding: 0;
+}
+
+.apex-grid-sidebar .wp-block-navigation__container {
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.apex-grid-sidebar .wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item {
+	width: 100%;
+}
+
+/* Menu links. */
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always .wp-block-navigation__submenu-container .wp-block-navigation-item__content,
+.apex-grid-sidebar .wp-block-navigation__container > .wp-block-navigation-item:not(.has-child) > .wp-block-navigation-item__content {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 2.75rem;
+	padding: 0.5rem 1rem;
+	border-left: 2px solid transparent;
+	border-radius: 0 2px 2px 0;
+	color: var(--wp--preset--color--text-secondary);
+	text-decoration: none;
+	transition: color var(--wp--custom--transition--duration) ease, background-color var(--wp--custom--transition--duration) ease, border-color var(--wp--custom--transition--duration) ease;
+}
+
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover,
+.apex-grid-sidebar .wp-block-navigation__container > .wp-block-navigation-item:not(.has-child) > .wp-block-navigation-item__content:hover {
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--surface-strong);
+}
+
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always .wp-block-navigation__submenu-container .current-menu-item > .wp-block-navigation-item__content,
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always .wp-block-navigation__submenu-container [aria-current="page"],
+.apex-grid-sidebar .wp-block-navigation__container > .current-menu-item:not(.has-child) > .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--primary-bright);
+	background-color: color-mix(in srgb, var(--wp--preset--color--primary) 10%, transparent);
+	border-left-color: var(--wp--preset--color--primary);
+}
+
+/* Nested page-list children. */
+.apex-grid-sidebar .wp-block-navigation .has-child.open-always .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container {
+	padding-left: 1rem;
+}
+
+/* Optional menu icons: add one of these classes to a menu item (Advanced → Additional CSS class). */
+.apex-grid-sidebar [class*="apex-grid-icon-"] > .wp-block-navigation-item__content::before {
+	content: "";
+	flex: 0 0 auto;
+	width: 1rem;
+	height: 1rem;
+	background-color: currentColor;
+	-webkit-mask: var(--apex-grid-icon) center / contain no-repeat;
+	mask: var(--apex-grid-icon) center / contain no-repeat;
+}
+
+.apex-grid-icon-home { --apex-grid-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z'/%3E%3C/svg%3E"); }
+.apex-grid-icon-chat { --apex-grid-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M4 4h16v12H8l-4 4z'/%3E%3C/svg%3E"); }
+.apex-grid-icon-image { --apex-grid-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Crect x='3' y='4' width='18' height='16'/%3E%3Cpath d='m3 16 5-5 5 5 3-3 5 5'/%3E%3C/svg%3E"); }
+.apex-grid-icon-calendar { --apex-grid-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Crect x='3' y='5' width='18' height='16'/%3E%3Cpath d='M3 10h18M8 3v4M16 3v4'/%3E%3C/svg%3E"); }
+.apex-grid-icon-flag { --apex-grid-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M5 21V4h12l-2 4 2 4H5'/%3E%3C/svg%3E"); }
+.apex-grid-icon-chart { --apex-grid-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M5 21V11M12 21V4M19 21v-6'/%3E%3C/svg%3E"); }
+
+/* Bottom area: search, social icons and contact button. */
+.apex-grid-sidebar .wp-block-navigation .wp-block-search {
+	width: 100%;
+	margin-top: auto;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--wp--preset--color--border-base);
+}
+
+.apex-grid-sidebar .wp-block-navigation .wp-block-social-links {
+	gap: 0.25rem;
+}
+
+.apex-grid-sidebar .wp-block-navigation .wp-block-social-links .wp-social-link {
+	color: var(--wp--preset--color--muted);
+	background: transparent;
+}
+
+.apex-grid-sidebar .wp-block-navigation .wp-block-social-links .wp-social-link:hover {
+	color: var(--wp--preset--color--white);
+}
+
+.apex-grid-sidebar .wp-block-navigation .wp-block-social-links .wp-block-social-link-anchor {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	padding: 0;
+}
+
+.apex-grid-sidebar .wp-block-navigation .apex-grid-sidebar__cta {
+	width: 100%;
+}
+
+.apex-grid-sidebar .wp-block-navigation .apex-grid-sidebar__cta .wp-block-button__link {
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+}
+
+/* -------------------------------------------------------------------------
+ * Desktop: fixed left sidebar
+ * ---------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+
+	.apex-grid-shell {
+		display: grid;
+		grid-template-columns: var(--wp--custom--sidebar--width) minmax(0, 1fr);
+		align-items: start;
+	}
+
+	.apex-grid-shell > .apex-grid-sidebar {
+		position: sticky;
+		top: 0;
+		box-sizing: border-box;
+		height: 100vh;
+		height: 100dvh;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		border-right: 1px solid var(--wp--preset--color--border-base);
+		scrollbar-width: thin;
+		scrollbar-color: var(--wp--preset--color--border-strong) transparent;
+	}
+
+	.admin-bar .apex-grid-shell > .apex-grid-sidebar {
+		top: 32px;
+		height: calc(100vh - 32px);
+		height: calc(100dvh - 32px);
+	}
+
+	.admin-bar .apex-grid-shell,
+	.admin-bar .apex-grid-main {
+		min-height: calc(100dvh - 32px);
+	}
+
+	.apex-grid-sidebar .apex-grid-sidebar__inner {
+		box-sizing: border-box;
+		min-height: 100%;
+	}
+
+	/* Let the navigation fill the column so the bottom area sits at the bottom. */
+	.apex-grid-sidebar .wp-block-navigation {
+		flex: 1 1 auto;
+		align-items: stretch;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container:not(.is-menu-open),
+	.apex-grid-sidebar .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-close,
+	.apex-grid-sidebar .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-dialog {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__responsive-container-content {
+		flex: 1 1 auto;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		gap: 1rem;
+	}
+}
+
+/* -------------------------------------------------------------------------
+ * Tablet & mobile: top bar + left drawer
+ * ---------------------------------------------------------------------- */
+
+@media (max-width: 1023.98px) {
+
+	.apex-grid-shell > .apex-grid-sidebar {
+		position: sticky;
+		top: 0;
+		height: var(--wp--custom--topbar--height);
+		border-bottom: 1px solid var(--wp--preset--color--border-base);
+	}
+
+	/* The racing stripe moves to the bottom edge of the top bar. */
+	.apex-grid-shell > .apex-grid-sidebar::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: -1px;
+		left: 0;
+		height: 2px;
+		background: var(--wp--preset--gradient--racing-stripe);
+	}
+
+	.apex-grid-sidebar .apex-grid-sidebar__inner.apex-grid-sidebar__inner {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		height: 100%;
+		padding: 0 0.5rem 0 1rem;
+	}
+
+	.apex-grid-sidebar .apex-grid-sidebar__inner > .wp-block-separator,
+	.apex-grid-sidebar .wp-block-site-tagline {
+		display: none;
+	}
+
+	.apex-grid-sidebar .apex-grid-sidebar__brand.apex-grid-sidebar__brand {
+		padding: 0;
+	}
+
+	.apex-grid-sidebar .wp-block-site-logo img {
+		max-height: 2rem;
+		width: auto;
+	}
+
+	.apex-grid-sidebar .wp-block-site-title {
+		font-size: var(--wp--preset--font-size--large);
+	}
+
+	.apex-grid-sidebar .wp-block-navigation {
+		flex: 0 0 auto;
+		margin-left: auto;
+	}
+
+	/* Keep the overlay toggle visible up to the sidebar breakpoint (core switches at 600px). */
+	.apex-grid-sidebar .wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container-open {
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		color: var(--wp--preset--color--white);
+	}
+
+	/* Drawer: the container is the dimmed backdrop, the dialog is the panel. */
+	.apex-grid-sidebar .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
+		padding: 0;
+		background-color: rgba(0, 0, 0, 0.7) !important;
+		color: var(--wp--preset--color--text-secondary) !important;
+		animation: none;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-close {
+		box-sizing: border-box;
+		width: min(var(--wp--custom--drawer--width), 85vw);
+		max-width: none;
+		min-height: 100%;
+		margin: 0;
+		background-color: var(--wp--preset--color--surface);
+		border-right: 1px solid var(--wp--preset--color--border-base);
+		background-image: linear-gradient(var(--wp--preset--color--primary), var(--wp--preset--color--primary));
+		background-repeat: no-repeat;
+		background-size: 100% 3px;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog {
+		min-height: 100%;
+		padding: 1rem 0.75rem 1.5rem;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+		top: 0.75rem;
+		right: 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		color: var(--wp--preset--color--white);
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content.wp-block-navigation__responsive-container-content {
+		flex: 1 1 auto;
+		align-items: stretch;
+		gap: 1rem;
+		padding-top: 3.5rem;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+		gap: 1.5rem;
+	}
+
+	.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .has-child.open-always {
+		align-items: stretch;
+	}
+
+	@media not (prefers-reduced-motion) {
+
+		.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open {
+			animation: apex-grid-backdrop-in var(--wp--custom--transition--duration) ease-out;
+		}
+
+		.apex-grid-sidebar .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-close {
+			animation: apex-grid-drawer-in 200ms ease-out;
+		}
+	}
+}
+
+/* Admin bar is fixed from 600px up: offset the sticky top bar and the drawer. */
+@media (min-width: 600px) and (max-width: 1023.98px) {
+
+	.admin-bar .apex-grid-shell > .apex-grid-sidebar {
+		top: 46px;
+	}
+}
+
+@media (min-width: 783px) and (max-width: 1023.98px) {
+
+	.admin-bar .apex-grid-shell > .apex-grid-sidebar {
+		top: 32px;
+	}
+}
+
+@keyframes apex-grid-backdrop-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes apex-grid-drawer-in {
+	from { transform: translateX(-100%); }
+	to { transform: translateX(0); }
+}
+
+/* -------------------------------------------------------------------------
+ * Font size / line height pairs for small text
+ * Zero specificity, so headings and any line height set in the editor win.
+ * ---------------------------------------------------------------------- */
+
+:where(.has-label-font-size) {
+	line-height: 1.333;
+}
+
+:where(.has-x-small-font-size, .has-small-font-size) {
+	line-height: 1.43;
+}
+
+/* -------------------------------------------------------------------------
+ * Racing stripe heading and kicker (also used by Query Title, so loaded globally)
+ * ---------------------------------------------------------------------- */
+
+.is-style-apex-grid-stripe {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	letter-spacing: 0.1em;
+}
+
+.is-style-apex-grid-stripe::before {
+	content: "";
+	flex: 0 0 2rem;
+	height: 3px;
+	background: var(--wp--preset--gradient--racing-stripe);
+}
+
+/* Page headings (e.g. archive titles) track wider than section headings. */
+h1.is-style-apex-grid-stripe {
+	letter-spacing: 0.15em;
+}
+
+.has-text-align-center.is-style-apex-grid-stripe {
+	justify-content: center;
+}
+
+.is-style-apex-grid-kicker {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	color: var(--wp--preset--color--primary-bright);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	font-weight: 500;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+}
+
+.is-style-apex-grid-kicker::before {
+	content: "";
+	flex: 0 0 2rem;
+	height: 2px;
+	background: var(--wp--preset--gradient--racing-stripe);
+}
+
+.is-style-apex-grid-kicker.has-text-align-center {
+	justify-content: center;
+}
+
+/* -------------------------------------------------------------------------
+ * Posts
+ * ---------------------------------------------------------------------- */
+
+/* "Pinned" label only shows on sticky posts in the blog feed. */
+.wp-block-post-template .apex-grid-pinned-label {
+	display: none;
+}
+
+.wp-block-post-template .sticky .apex-grid-pinned-label {
+	display: flex;
+}
+
+.wp-block-post-template .sticky > .apex-grid-feed-card {
+	border-color: color-mix(in srgb, var(--wp--preset--color--primary) 45%, transparent);
+	background-image: linear-gradient(135deg, color-mix(in srgb, var(--wp--preset--color--primary) 8%, transparent), transparent 60%);
+}
+
+/* Hide the related posts section when the query is empty. */
+.apex-grid-related:not(:has(.wp-block-post-template > li)) {
+	display: none;
+}
+
+/* Meta row separators. */
+.apex-grid-post-meta > * + *:not(.wp-block-avatar + *)::before {
+	content: "·";
+	margin-right: 0.75rem;
+	color: var(--wp--preset--color--subtle);
+}
+
+.wp-block-post-time-to-read {
+	color: var(--wp--preset--color--muted);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* Tags as small chips. */
+.apex-grid-tags a {
+	display: inline-block;
+	padding: 0.25rem 0.625rem;
+	border: 1px solid var(--wp--preset--color--border-strong);
+	border-radius: 2px;
+	color: var(--wp--preset--color--text-secondary);
+}
+
+.apex-grid-tags .wp-block-post-terms__separator {
+	display: inline-block;
+	width: 0.375rem;
+	overflow: hidden;
+	color: transparent;
+}
+
+/* -------------------------------------------------------------------------
+ * Global details
+ * ---------------------------------------------------------------------- */
+
+/* Visible focus ring, offset so it reads against base and primary backgrounds. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible,
+.wp-element-button:focus-visible,
+.wp-block-navigation-item__content:focus-visible {
+	outline: var(--wp--custom--focus--width) solid var(--wp--preset--color--accent);
+	outline-offset: var(--wp--custom--focus--offset);
+	box-shadow: none;
+}
+
+.apex-grid-sidebar .wp-block-navigation-item__content:focus-visible {
+	outline-offset: -2px;
+}
+
+::selection {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+}
+
+.wp-element-button,
+.wp-block-button__link {
+	transition: background-color var(--wp--custom--transition--duration) ease, border-color var(--wp--custom--transition--duration) ease, color var(--wp--custom--transition--duration) ease, box-shadow var(--wp--custom--transition--duration) ease;
+}
+
+.wp-block-button.is-style-outline > .wp-block-button__link:hover {
+	border-color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--surface-strong);
+}
+
+/* Form fields (search, comments, plugins) on dark surfaces. */
+:where(input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], select, textarea) {
+	box-sizing: border-box;
+	padding: 0.625rem 0.75rem;
+	border: 1px solid var(--wp--preset--color--border-strong);
+	border-radius: 2px;
+	background-color: var(--wp--preset--color--surface-strong);
+	color: var(--wp--preset--color--contrast);
+	font-family: inherit;
+	font-size: var(--wp--preset--font-size--small);
+}
+
+:where(input, textarea)::placeholder {
+	color: var(--wp--preset--color--muted);
+	opacity: 1;
+}
+
+.wp-block-post-comments-form :where(input[type="text"], input[type="email"], input[type="url"], textarea) {
+	width: 100%;
+}
+
+.wp-block-post-comments-form label {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--muted);
+}
+
+/* Comments: thread lines. */
+.wp-block-comment-template ol {
+	padding-left: 1.25rem;
+	border-left: 1px solid var(--wp--preset--color--border-base);
+}
+
+/* Logos-only social icons: use theme colours unless an icon colour is chosen. */
+.wp-block-social-links.is-style-logos-only:not(.has-icon-color) .wp-social-link.wp-social-link {
+	color: var(--wp--preset--color--muted);
+}
+
+.wp-block-social-links.is-style-logos-only:not(.has-icon-color) .wp-social-link.wp-social-link:hover {
+	color: var(--wp--preset--color--white);
+}
+
+/* Avatars are square with a small radius, as in the prototype. */
+.wp-block-avatar img {
+	border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

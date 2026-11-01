@@ -1,0 +1,56 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Carbon Cyan",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "name": "Base", "slug": "base", "color": "#0A0A0A" },
+				{ "name": "Surface", "slug": "surface", "color": "#111111" },
+				{ "name": "Surface Raised", "slug": "surface-raised", "color": "#181818" },
+				{ "name": "Surface Strong", "slug": "surface-strong", "color": "#222222" },
+				{ "name": "Border", "slug": "border-base", "color": "#2E2E2E" },
+				{ "name": "Border Strong", "slug": "border-strong", "color": "#3A3A3A" },
+				{ "name": "Subtle", "slug": "subtle", "color": "#4A4A4A" },
+				{ "name": "Muted", "slug": "muted", "color": "#9CA3AF" },
+				{ "name": "Text Secondary", "slug": "text-secondary", "color": "#D1D5DB" },
+				{ "name": "Contrast", "slug": "contrast", "color": "#F0F0F0" },
+				{ "name": "White", "slug": "white", "color": "#FFFFFF" },
+				{ "name": "Primary", "slug": "primary", "color": "#00D4FF" },
+				{ "name": "Primary Dark", "slug": "primary-dark", "color": "#00A9CC" },
+				{ "name": "Primary Bright", "slug": "primary-bright", "color": "#5CE1FF" },
+				{ "name": "Accent", "slug": "accent", "color": "#FF4040" },
+				{ "name": "Highlight", "slug": "highlight", "color": "#FFD700" },
+				{ "name": "Success", "slug": "success", "color": "#00C853" }
+			],
+			"gradients": [
+				{ "name": "Racing Stripe", "slug": "racing-stripe", "gradient": "linear-gradient(90deg, #00D4FF 0%, #00D4FF 65%, #FFFFFF 100%)" },
+				{ "name": "Red Heat", "slug": "red-heat", "gradient": "linear-gradient(135deg, #8AEBFF 0%, #00D4FF 55%, #00A9CC 100%)" },
+				{ "name": "Hero Fade", "slug": "hero-fade", "gradient": "linear-gradient(90deg, rgba(10,10,10,0.96) 0%, rgba(10,10,10,0.75) 45%, rgba(10,10,10,0.2) 100%)" },
+				{ "name": "Bottom Fade", "slug": "bottom-fade", "gradient": "linear-gradient(0deg, #0A0A0A 0%, rgba(10,10,10,0) 55%)" },
+				{ "name": "Member Card", "slug": "member-card", "gradient": "linear-gradient(135deg, #181818 0%, #111111 60%, rgba(0,212,255,0.14) 100%)" }
+			]
+		},
+		"custom": {
+			"focus": { "width": "2px", "offset": "2px" }
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": { "text": "var:preset|color|base" },
+				":hover": { "color": { "text": "var:preset|color|base" } },
+				":focus": { "color": { "text": "var:preset|color|base" } }
+			}
+		},
+		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"color": { "text": "var:preset|color|white" }
+					}
+				}
+			}
+		}
+	}
+}

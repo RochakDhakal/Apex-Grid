@@ -1,0 +1,23 @@
+/*
+Theme Name: Apex Grid
+Theme URI:
+Author: Rochak Dhakal
+Author URI:https://dhakalrochak.com.np/
+Description: Apex Grid is a dark, motorsport-inspired block theme with a fixed sidebar navigation in place of a top header. Built for clubs, communities, teams and blogs, it uses native blocks, theme.json and Full Site Editing so every part of the layout can be customised in the Site Editor.
+Requires at least: 6.9
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: apex-grid
+Tags: blog, news, entertainment, one-column, two-columns, grid-layout, left-sidebar, right-sidebar, wide-blocks, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, style-variations, sticky-post, template-editing, threaded-comments, translation-ready
+
+Apex Grid WordPress Theme, (C) 2026 Rochak Dhakal.
+Apex Grid is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*
+ * All visual styles live in theme.json and assets/css/.
+ * This file only carries the theme header.
+ */

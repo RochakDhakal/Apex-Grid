@@ -1,0 +1,43 @@
+/**
+ * Group block styles: card, carbon texture, speed lines.
+ *
+ * @package Apex_Grid
+ */
+
+.wp-block-group.is-style-apex-grid-stat-card {
+	border: 1px solid var(--wp--preset--color--surface-strong);
+	border-radius: 4px;
+	background-color: var(--wp--preset--color--surface);
+	transition: background-color var(--wp--custom--transition--duration) ease, border-color var(--wp--custom--transition--duration) ease;
+}
+
+.wp-block-group.is-style-apex-grid-stat-card:hover,
+.wp-block-group.is-style-apex-grid-stat-card:focus-within {
+	border-color: var(--wp--preset--color--border-strong);
+	background-color: var(--wp--preset--color--surface-raised);
+}
+
+.wp-block-group.is-style-apex-grid-carbon-texture,
+.wp-block-group.is-style-apex-grid-speed-lines {
+	position: relative;
+	isolation: isolate;
+}
+
+.wp-block-group.is-style-apex-grid-carbon-texture::before,
+.wp-block-group.is-style-apex-grid-speed-lines::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.wp-block-group.is-style-apex-grid-carbon-texture::before {
+	background-image:
+		repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 6px),
+		repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.25) 0 2px, transparent 2px 6px);
+}
+
+.wp-block-group.is-style-apex-grid-speed-lines::before {
+	background-image: repeating-linear-gradient(-12deg, transparent 0 38px, rgba(255, 255, 255, 0.035) 38px 39px, transparent 39px 80px);
+}

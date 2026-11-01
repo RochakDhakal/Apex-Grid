@@ -1,0 +1,38 @@
+/**
+ * Paragraph block style: live dot.
+ *
+ * @package Apex_Grid
+ */
+
+.is-style-apex-grid-live-dot {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.is-style-apex-grid-live-dot::before {
+	content: "";
+	flex: 0 0 auto;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--success);
+	box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.6);
+}
+
+@media not (prefers-reduced-motion) {
+
+	.is-style-apex-grid-live-dot::before {
+		animation: apex-grid-pulse 2s ease-out infinite;
+	}
+}
+
+@keyframes apex-grid-pulse {
+	0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.6); }
+	70% { box-shadow: 0 0 0 0.5rem rgba(0, 200, 83, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
+}

@@ -1,0 +1,44 @@
+/**
+ * Cover block styles: carbon texture, speed lines.
+ *
+ * @package Apex_Grid
+ */
+
+.wp-block-cover.is-style-apex-grid-carbon-texture::after,
+.wp-block-cover.is-style-apex-grid-speed-lines::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.wp-block-cover.is-style-apex-grid-carbon-texture::after {
+	background-image:
+		repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 6px),
+		repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.25) 0 2px, transparent 2px 6px);
+}
+
+.wp-block-cover.is-style-apex-grid-speed-lines::after {
+	background-image: repeating-linear-gradient(-12deg, transparent 0 38px, rgba(255, 255, 255, 0.04) 38px 39px, transparent 39px 80px);
+}
+
+.wp-block-cover.is-style-apex-grid-carbon-texture > .wp-block-cover__inner-container,
+.wp-block-cover.is-style-apex-grid-speed-lines > .wp-block-cover__inner-container {
+	z-index: 2;
+}
+
+/* Second overlay layer for the hero: add the class "apex-grid-bottom-fade" to a Cover. */
+.wp-block-cover.apex-grid-bottom-fade > .wp-block-cover__background + .wp-block-cover__inner-container::before {
+	content: "";
+	position: absolute;
+	inset: auto 0 0;
+	height: 55%;
+	background: var(--wp--preset--gradient--bottom-fade);
+	pointer-events: none;
+	z-index: -1;
+}
+
+.wp-block-cover.apex-grid-bottom-fade > .wp-block-cover__inner-container {
+	position: static;
+}

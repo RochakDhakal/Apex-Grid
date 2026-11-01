@@ -1,0 +1,240 @@
+/**
+ * Apex Grid — dashboard notice.
+ *
+ * Restyles core's .notice in the theme's look: carbon surface, racing
+ * stripe, condensed display type and the primary button. Laid out as one
+ * compact row (thumbnail, text, button) so the banner stays under 150px
+ * tall at every screen width. The dismiss link
+ * reuses core's .notice-dismiss icon, so it needs the same positioning
+ * context. Colours mirror the theme.json palette. Selectors are scoped to
+ * .apex-grid-notice.notice so they win over core's `.notice p` and
+ * `div.notice a` rules.
+ *
+ * @package Apex_Grid
+ */
+
+@font-face {
+	font-family: "Barlow Condensed";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/barlow-condensed/BarlowCondensed-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "DM Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/dm-sans/DMSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../fonts/jetbrains-mono/JetBrainsMono-Medium.woff2") format("woff2");
+}
+
+/* -------------------------------------------------------------------------
+ * Shell
+ * ---------------------------------------------------------------------- */
+
+.apex-grid-notice.notice {
+	position: relative;
+	display: grid;
+	grid-template-columns: 112px minmax(0, 1fr) auto;
+	gap: 24px;
+	align-items: center;
+	overflow: hidden;
+	padding: 16px 48px 16px 16px;
+	border: 1px solid #2e2e2e;
+	border-radius: 2px;
+	background: linear-gradient(135deg, #181818 0%, #111111 60%, rgba(225, 6, 0, 0.18) 100%), #111111;
+	box-shadow: none;
+	color: #d1d5db;
+	font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Racing stripe across the top edge. */
+.apex-grid-notice.notice::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, #e10600 0%, #e10600 65%, #00d4ff 100%);
+}
+
+/* -------------------------------------------------------------------------
+ * Content
+ * ---------------------------------------------------------------------- */
+
+.apex-grid-notice.notice p {
+	margin: 0;
+	padding: 0;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__kicker {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-family: "JetBrains Mono", ui-monospace, monospace;
+	font-size: 11px;
+	line-height: 1.333;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: #ff4040;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__kicker::before {
+	content: "";
+	width: 24px;
+	height: 2px;
+	background: linear-gradient(90deg, #e10600 0%, #e10600 65%, #00d4ff 100%);
+}
+
+.apex-grid-notice.notice .apex-grid-notice__title {
+	margin: 6px 0;
+	padding: 0;
+	font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__title span {
+	color: #e10600;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__text {
+	max-width: 42em;
+	font-size: 14px;
+	line-height: 1.43;
+	color: #d1d5db;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__actions {
+	white-space: nowrap;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__button {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid #e10600;
+	border-radius: 2px;
+	background: #e10600;
+	box-shadow: 0 0 24px rgba(225, 6, 0, 0.35);
+	font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__button:hover,
+.apex-grid-notice.notice .apex-grid-notice__button:focus {
+	border-color: #b00500;
+	background: #b00500;
+	color: #ffffff;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__button:focus {
+	outline: 2px solid #00d4ff;
+	outline-offset: 2px;
+	box-shadow: none;
+}
+
+/* -------------------------------------------------------------------------
+ * Screenshot thumbnail (4:3, 84px tall)
+ * ---------------------------------------------------------------------- */
+
+.apex-grid-notice.notice .apex-grid-notice__media img {
+	display: block;
+	width: 112px;
+	height: 84px;
+	object-fit: cover;
+	border: 1px solid #3a3a3a;
+	border-radius: 2px;
+}
+
+/* -------------------------------------------------------------------------
+ * Dismiss
+ * ---------------------------------------------------------------------- */
+
+.apex-grid-notice.notice .apex-grid-notice__dismiss {
+	top: 8px;
+	text-decoration: none;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__dismiss::before {
+	color: #9ca3af;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__dismiss:hover::before,
+.apex-grid-notice.notice .apex-grid-notice__dismiss:focus::before {
+	color: #ffffff;
+}
+
+.apex-grid-notice.notice .apex-grid-notice__dismiss:focus {
+	outline: 2px solid #00d4ff;
+	box-shadow: none;
+}
+
+/* -------------------------------------------------------------------------
+ * Small screens: drop the thumbnail and kicker, button sits under the text.
+ * ---------------------------------------------------------------------- */
+
+@media screen and (max-width: 960px) {
+
+	.apex-grid-notice.notice {
+		grid-template-columns: minmax(0, 1fr) auto;
+	}
+
+	.apex-grid-notice.notice .apex-grid-notice__media {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.apex-grid-notice.notice {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 8px;
+		padding: 12px 40px 12px 14px;
+	}
+
+	.apex-grid-notice.notice .apex-grid-notice__kicker {
+		display: none;
+	}
+
+	.apex-grid-notice.notice .apex-grid-notice__title {
+		margin: 0 0 4px;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+	}
+
+	.apex-grid-notice.notice .apex-grid-notice__button {
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+	.apex-grid-notice.notice .apex-grid-notice__title {
+		font-size: 17px;
+	}
+
+	.apex-grid-notice.notice .apex-grid-notice__text {
+		font-size: 13px;
+	}
+}

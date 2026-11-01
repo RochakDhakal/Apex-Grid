@@ -1,0 +1,89 @@
+/**
+ * Table block styles.
+ *
+ * @package Apex_Grid
+ */
+
+.wp-block-table table {
+	border-collapse: collapse;
+}
+
+.wp-block-table :where(th, td) {
+	padding: 0.75rem 1rem;
+	border-color: var(--wp--preset--color--border-base);
+}
+
+.wp-block-table thead {
+	border-bottom: 1px solid var(--wp--preset--color--border-strong);
+}
+
+.wp-block-table th {
+	color: var(--wp--preset--color--muted);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+/* Leaderboard: borderless rows on a surface panel, first column as position. */
+.wp-block-table.is-style-apex-grid-leaderboard {
+	overflow-x: auto;
+	border: 1px solid var(--wp--preset--color--border-base);
+	border-radius: 4px;
+	background-color: var(--wp--preset--color--surface);
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard table {
+	border: 0;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard :where(th, td) {
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: var(--wp--preset--color--border-base);
+	white-space: nowrap;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard tbody tr {
+	transition: background-color var(--wp--custom--transition--duration) ease;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard tbody tr:hover {
+	background-color: var(--wp--preset--color--surface-raised);
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard td:first-child {
+	width: 3rem;
+	color: var(--wp--preset--color--muted);
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 900;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard tbody tr:first-child td:first-child {
+	color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard td:last-child,
+.wp-block-table.is-style-apex-grid-leaderboard th:last-child {
+	text-align: right;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard td:last-child {
+	color: var(--wp--preset--color--white);
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 700;
+}
+
+.wp-block-table.is-style-apex-grid-leaderboard figcaption {
+	padding: 0.75rem 1rem;
+	margin: 0;
+	border-top: 1px solid var(--wp--preset--color--border-base);
+}

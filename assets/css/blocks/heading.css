@@ -1,0 +1,30 @@
+/**
+ * Heading block style: gradient text.
+ *
+ * @package Apex_Grid
+ */
+
+/* Whole heading, unless it contains highlighted text — then only the highlight. */
+.wp-block-heading.is-style-apex-grid-gradient-text:not(:has(mark)),
+.wp-block-heading.is-style-apex-grid-gradient-text mark {
+	background: var(--wp--preset--gradient--red-heat);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	color: transparent;
+}
+
+.wp-block-heading.is-style-apex-grid-gradient-text mark {
+	background-color: transparent;
+}
+
+/* Fallback for browsers without background-clip: text. */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+
+	.wp-block-heading.is-style-apex-grid-gradient-text:not(:has(mark)),
+	.wp-block-heading.is-style-apex-grid-gradient-text mark {
+		background: none;
+		color: var(--wp--preset--color--primary-bright);
+	}
+}
