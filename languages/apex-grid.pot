@@ -282,7 +282,7 @@ msgstr ""
 
 #: patterns/hero.php:24
 msgctxt "Hero kicker"
-msgid "Est. 2026 · Monaco"
+msgid "Est. 2026 · Kathmandu"
 msgstr ""
 
 #: patterns/hero.php:28
